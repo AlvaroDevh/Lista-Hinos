@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Verifica se o usuário está autenticado. Se não estiver, redireciona para a página de login.
+if (!isset($_SESSION['username'])) {
+    header('Location: telas/login.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
